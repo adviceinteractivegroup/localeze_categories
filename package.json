@@ -1,0 +1,63 @@
+{
+  "name": "localeze_categories",
+  "version": "1.0.0",
+  "description": "localeze categories",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint .",
+    "unit": " ava --verbose",
+    "watch:test": "npm run unit -- --watch",
+    "cover": "nyc npm run unit",
+    "check-coverage": "nyc check-coverage --statements 85 --branches 85 --functions 85 --lines 85",
+    "test": "node index.js"
+  },
+  "eslintConfig": {
+    "extends": "google"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adviceinteractivegroup/localeze-categories"
+  },
+  "keywords": [
+    "gmb",
+    "advice",
+    "interactive"
+  ],
+  "author": "advice interactive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adviceinteractivegroup/localeze-categories/issues"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "aws-sdk": "^2.6.2",
+    "eslint": "^3.5.0",
+    "eslint-config-google": "^0.6.0",
+    "gulp": "^3.9.1",
+    "gulp-ava": "^0.14.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-zip": "^3.2.0",
+    "lambda-local": "0.0.7",
+    "nyc": "^8.1.0",
+    "standard": "^8.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "ramda": "^0.22.1",
+    "request": "^2.74.0"
+  },
+  "ava": {
+    "files": [
+      "unitTests/*.js"
+    ],
+    "failFast": true,
+    "tap": true
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text",
+      "html"
+    ]
+  }
+}
